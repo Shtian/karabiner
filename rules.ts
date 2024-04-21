@@ -198,6 +198,7 @@ const rules: KarabinerRules[] = [
       b: {
         to: [{ key_code: "rewind" }],
       },
+      l: open("raycast://extensions/mattisssa/spotify-player/nowPlaying"),
     },
 
     // r = "Raycast"
