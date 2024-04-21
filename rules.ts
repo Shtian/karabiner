@@ -55,61 +55,99 @@ const rules: KarabinerRules[] = [
       //      },
     ],
   },
+  {
+    description: "Map { } to right ⌘ + 7 / 0",
+    manipulators: [
+      {
+        from: {
+          key_code: "7",
+          modifiers: {
+            mandatory: ["right_gui"],
+          },
+        },
+        to: [
+          {
+            key_code: "8",
+            modifiers: ["right_alt", "right_shift"],
+          },
+        ],
+        type: "basic",
+      },
+      {
+        from: {
+          key_code: "0",
+          modifiers: {
+            mandatory: ["right_gui"],
+          },
+        },
+        to: [
+          {
+            key_code: "9",
+            modifiers: ["right_alt", "right_shift"],
+          },
+        ],
+        type: "basic",
+      },
+    ],
+  },
+  {
+    description: "Map [ ] to right ⌘ + 8 / 9",
+    manipulators: [
+      {
+        from: {
+          key_code: "8",
+          modifiers: {
+            mandatory: ["right_gui"],
+          },
+        },
+        to: [
+          {
+            key_code: "8",
+            modifiers: ["right_alt"],
+          },
+        ],
+        type: "basic",
+      },
+      {
+        from: {
+          key_code: "9",
+          modifiers: {
+            mandatory: ["right_gui"],
+          },
+        },
+        to: [
+          {
+            key_code: "9",
+            modifiers: ["right_alt"],
+          },
+        ],
+        type: "basic",
+      },
+    ],
+  },
   ...createHyperSubLayers({
-    spacebar: open(
-      "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
-    ),
     // b = "B"rowse
     b: {
       t: open("https://twitter.com"),
       // Quarterly "P"lan
-      p: open("https://qrtr.ly/plan"),
-      y: open("https://news.ycombinator.com"),
-      f: open("https://facebook.com"),
-      r: open("https://reddit.com"),
     },
     // o = "Open" applications
     o: {
-      1: app("1Password"),
+      1: app("Bitwarden"),
+      a: app("Arc"),
       g: app("Google Chrome"),
-      c: app("Notion Calendar"),
-      v: app("Visual Studio Code"),
+      v: app("Visual Studio Code - Insiders"),
       d: app("Discord"),
       s: app("Slack"),
-      e: app("Superhuman"),
-      n: app("Notion"),
       t: app("Warp"),
-      // Open todo list managed via *H*ypersonic
-      h: open(
-        "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
-      ),
-      z: app("zoom.us"),
       // "M"essages
       m: app("Texts"),
       f: app("Finder"),
-      r: app("Texts"),
-      // "i"Message
-      i: app("Texts"),
       p: app("Spotify"),
-      a: app("iA Presenter"),
-      // "W"hatsApp has been replaced by Texts
-      w: open("Texts"),
-      l: open(
-        "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
-      ),
     },
 
     // w = "Window" via rectangle.app
     w: {
-      semicolon: {
-        description: "Window: Hide",
-        to: [
-          {
-            key_code: "h",
-            modifiers: ["right_command"],
-          },
-        ],
-      },
       y: rectangle("previous-display"),
       o: rectangle("next-display"),
       k: rectangle("top-half"),
@@ -117,93 +155,10 @@ const rules: KarabinerRules[] = [
       h: rectangle("left-half"),
       l: rectangle("right-half"),
       f: rectangle("maximize"),
-      u: {
-        description: "Window: Previous Tab",
-        to: [
-          {
-            key_code: "tab",
-            modifiers: ["right_control", "right_shift"],
-          },
-        ],
-      },
-      i: {
-        description: "Window: Next Tab",
-        to: [
-          {
-            key_code: "tab",
-            modifiers: ["right_control"],
-          },
-        ],
-      },
-      n: {
-        description: "Window: Next Window",
-        to: [
-          {
-            key_code: "grave_accent_and_tilde",
-            modifiers: ["right_command"],
-          },
-        ],
-      },
-      b: {
-        description: "Window: Back",
-        to: [
-          {
-            key_code: "open_bracket",
-            modifiers: ["right_command"],
-          },
-        ],
-      },
-      // Note: No literal connection. Both f and n are already taken.
-      m: {
-        description: "Window: Forward",
-        to: [
-          {
-            key_code: "close_bracket",
-            modifiers: ["right_command"],
-          },
-        ],
-      },
-      d: {
-        description: "Window: Next display",
-        to: [
-          {
-            key_code: "right_arrow",
-            modifiers: ["right_control", "right_option", "right_command"],
-          },
-        ],
-      },
     },
 
     // s = "System"
     s: {
-      u: {
-        to: [
-          {
-            key_code: "volume_increment",
-          },
-        ],
-      },
-      j: {
-        to: [
-          {
-            key_code: "volume_decrement",
-          },
-        ],
-      },
-      i: {
-        to: [
-          {
-            key_code: "display_brightness_increment",
-          },
-        ],
-      },
-      k: {
-        to: [
-          {
-            key_code: "display_brightness_decrement",
-          },
-        ],
-      },
       l: {
         to: [
           {
@@ -219,13 +174,6 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      semicolon: {
-        to: [
-          {
-            key_code: "fastforward",
-          },
-        ],
-      },
       e: {
         to: [
           {
@@ -235,57 +183,8 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      // Turn on Elgato KeyLight
-      y: {
-        to: [
-          {
-            shell_command: `curl -H 'Content-Type: application/json' --request PUT --data '{ "numberOfLights": 1, "lights": [ { "on": 1, "brightness": 100, "temperature": 215 } ] }' http://192.168.8.84:9123/elgato/lights`,
-          },
-        ],
-      },
-      h: {
-        to: [
-          {
-            shell_command: `curl -H 'Content-Type: application/json' --request PUT --data '{ "numberOfLights": 1, "lights": [ { "on": 0, "brightness": 100, "temperature": 215 } ] }' http://192.168.8.84:9123/elgato/lights`,
-          },
-        ],
-      },
       // "D"o not disturb toggle
       d: open(`raycast://extensions/yakitrak/do-not-disturb/toggle`),
-    },
-
-    // v = "moVe" which isn't "m" because we want it to be on the left hand
-    // so that hjkl work like they do in vim
-    v: {
-      h: {
-        to: [{ key_code: "left_arrow" }],
-      },
-      j: {
-        to: [{ key_code: "down_arrow" }],
-      },
-      k: {
-        to: [{ key_code: "up_arrow" }],
-      },
-      l: {
-        to: [{ key_code: "right_arrow" }],
-      },
-      // Magicmove via homerow.app
-      m: {
-        to: [{ key_code: "f", modifiers: ["right_control"] }],
-      },
-      // Scroll mode via homerow.app
-      s: {
-        to: [{ key_code: "j", modifiers: ["right_control"] }],
-      },
-      d: {
-        to: [{ key_code: "d", modifiers: ["right_shift", "right_command"] }],
-      },
-      u: {
-        to: [{ key_code: "page_down" }],
-      },
-      i: {
-        to: [{ key_code: "page_up" }],
-      },
     },
 
     // c = Musi*c* which isn't "m" because we want it to be on the left hand
@@ -303,25 +202,14 @@ const rules: KarabinerRules[] = [
 
     // r = "Raycast"
     r: {
-      n: open("raycast://script-commands/dismiss-notifications"),
-      l: open(
-        "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
-      ),
       e: open(
         "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
       ),
       c: open("raycast://extensions/raycast/system/open-camera"),
       p: open("raycast://extensions/raycast/raycast/confetti"),
-      a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       s: open("raycast://extensions/peduarte/silent-mention/index"),
       h: open(
         "raycast://extensions/raycast/clipboard-history/clipboard-history"
-      ),
-      1: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
-      ),
-      2: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
       ),
     },
   }),
