@@ -1000,9 +1000,10 @@
               {
                 "to": [
                   {
-                    "key_code": "play_or_pause"
+                    "shell_command": "open raycast://extensions/mattisssa/spotify-player/togglePlayPause"
                   }
                 ],
+                "description": "Open raycast://extensions/mattisssa/spotify-player/togglePlayPause",
                 "type": "basic",
                 "from": {
                   "key_code": "p",
@@ -1023,9 +1024,10 @@
               {
                 "to": [
                   {
-                    "key_code": "fastforward"
+                    "shell_command": "open raycast://extensions/mattisssa/spotify-player/next"
                   }
                 ],
+                "description": "Open raycast://extensions/mattisssa/spotify-player/next",
                 "type": "basic",
                 "from": {
                   "key_code": "n",
@@ -1046,9 +1048,10 @@
               {
                 "to": [
                   {
-                    "key_code": "rewind"
+                    "shell_command": "open raycast://extensions/mattisssa/spotify-player/previous"
                   }
                 ],
+                "description": "Open raycast://extensions/mattisssa/spotify-player/previous",
                 "type": "basic",
                 "from": {
                   "key_code": "b",

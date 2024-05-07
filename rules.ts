@@ -193,15 +193,9 @@ const rules: KarabinerRules[] = [
 
     // c = Musi*c* which isn't "m" because we want it to be on the left hand
     c: {
-      p: {
-        to: [{ key_code: "play_or_pause" }],
-      },
-      n: {
-        to: [{ key_code: "fastforward" }],
-      },
-      b: {
-        to: [{ key_code: "rewind" }],
-      },
+      p: open("raycast://extensions/mattisssa/spotify-player/togglePlayPause"),
+      n: open("raycast://extensions/mattisssa/spotify-player/next"),
+      b: open("raycast://extensions/mattisssa/spotify-player/previous"),
       l: open("raycast://extensions/mattisssa/spotify-player/nowPlaying"),
     },
 
