@@ -133,7 +133,10 @@ const rules: KarabinerRules[] = [
     // b = "B"rowse
     b: {
       t: open("https://twitter.com"),
-      // Quarterly "P"lan
+      g: open("https://www.github.com"),
+      j: open("https://jira.ice.net/secure/Dashboard.jspa"),
+      o: open("https://octopus.ice.local/app#/Spaces-1/dashboard"),
+      a: open("https://www.authenticlash.app/"),
     },
     // o = "Open" applications
     o: {
