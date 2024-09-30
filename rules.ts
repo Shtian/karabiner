@@ -164,34 +164,12 @@ const rules: KarabinerRules[] = [
       f: rectangle("maximize"),
     },
 
-    // s = "System"
+    // r = "Raycast"
     s: {
-      l: {
-        to: [
-          {
-            key_code: "q",
-            modifiers: ["right_control", "right_command"],
-          },
-        ],
-      },
-      p: {
-        to: [
-          {
-            key_code: "play_or_pause",
-          },
-        ],
-      },
-      e: {
-        to: [
-          {
-            // Emoji picker
-            key_code: "spacebar",
-            modifiers: ["right_control", "right_command"],
-          },
-        ],
-      },
-      // "D"o not disturb toggle
-      d: open(`raycast://extensions/yakitrak/do-not-disturb/toggle`),
+      o: open("shottr://show"),
+      a: open("shottr://grab/area"),
+      t: open("shottr://ocr"),
+      c: open("shottr://load/clipboard"),
     },
 
     // c = Musi*c* which isn't "m" because we want it to be on the left hand

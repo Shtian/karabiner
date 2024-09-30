@@ -930,16 +930,13 @@
               {
                 "to": [
                   {
-                    "key_code": "q",
-                    "modifiers": [
-                      "right_control",
-                      "right_command"
-                    ]
+                    "shell_command": "open shottr://show"
                   }
                 ],
+                "description": "Open shottr://show",
                 "type": "basic",
                 "from": {
-                  "key_code": "l",
+                  "key_code": "o",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -957,12 +954,13 @@
               {
                 "to": [
                   {
-                    "key_code": "play_or_pause"
+                    "shell_command": "open shottr://grab/area"
                   }
                 ],
+                "description": "Open shottr://grab/area",
                 "type": "basic",
                 "from": {
-                  "key_code": "p",
+                  "key_code": "a",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -980,16 +978,13 @@
               {
                 "to": [
                   {
-                    "key_code": "spacebar",
-                    "modifiers": [
-                      "right_control",
-                      "right_command"
-                    ]
+                    "shell_command": "open shottr://ocr"
                   }
                 ],
+                "description": "Open shottr://ocr",
                 "type": "basic",
                 "from": {
-                  "key_code": "e",
+                  "key_code": "t",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -1007,13 +1002,13 @@
               {
                 "to": [
                   {
-                    "shell_command": "open raycast://extensions/yakitrak/do-not-disturb/toggle"
+                    "shell_command": "open shottr://load/clipboard"
                   }
                 ],
-                "description": "Open raycast://extensions/yakitrak/do-not-disturb/toggle",
+                "description": "Open shottr://load/clipboard",
                 "type": "basic",
                 "from": {
-                  "key_code": "d",
+                  "key_code": "c",
                   "modifiers": {
                     "optional": [
                       "any"
