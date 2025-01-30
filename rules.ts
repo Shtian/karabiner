@@ -164,12 +164,15 @@ const rules: KarabinerRules[] = [
       f: rectangle("maximize"),
     },
 
-    // r = "Raycast"
+    // s = "Shottr"
     s: {
       o: open("shottr://show"),
       a: open("shottr://grab/area"),
+      f: open("shottr://grab/fullscreen"),
+      w: open("shottr://grab/window"),
       t: open("shottr://ocr"),
       c: open("shottr://load/clipboard"),
+      d: open("shottr://grab/append"),
     },
 
     // c = Musi*c* which isn't "m" because we want it to be on the left hand
@@ -185,12 +188,15 @@ const rules: KarabinerRules[] = [
       e: open(
         "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
       ),
-      c: open("raycast://extensions/raycast/system/open-camera"),
-      p: open("raycast://extensions/raycast/raycast/confetti"),
+      o: open("raycast://extensions/raycast/system/open-camera"),
+      c: open("raycast://extensions/raycast/raycast/confetti"),
       s: open("raycast://extensions/peduarte/silent-mention/index"),
       h: open(
         "raycast://extensions/raycast/clipboard-history/clipboard-history"
       ),
+      p: open("raycast://extensions/jomifepe/bitwarden/search"),
+      m: open("raycast://extensions/ratoru/google-maps-search/travelTo"),
+      v: open("raycast://extensions/thomas/color-picker/pick-color"),
     },
   }),
 ];

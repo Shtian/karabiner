@@ -1354,7 +1354,7 @@
                 "description": "Open raycast://extensions/raycast/system/open-camera",
                 "type": "basic",
                 "from": {
-                  "key_code": "o",
+                  "key_code": "c",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -1378,7 +1378,7 @@
                 "description": "Open raycast://extensions/raycast/raycast/confetti",
                 "type": "basic",
                 "from": {
-                  "key_code": "c",
+                  "key_code": "p",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -1427,78 +1427,6 @@
                 "type": "basic",
                 "from": {
                   "key_code": "h",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_r",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open raycast://extensions/jomifepe/bitwarden/search"
-                  }
-                ],
-                "description": "Open raycast://extensions/jomifepe/bitwarden/search",
-                "type": "basic",
-                "from": {
-                  "key_code": "p",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_r",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open raycast://extensions/ratoru/google-maps-search/travelTo"
-                  }
-                ],
-                "description": "Open raycast://extensions/ratoru/google-maps-search/travelTo",
-                "type": "basic",
-                "from": {
-                  "key_code": "m",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_r",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open raycast://extensions/thomas/color-picker/pick-color"
-                  }
-                ],
-                "description": "Open raycast://extensions/thomas/color-picker/pick-color",
-                "type": "basic",
-                "from": {
-                  "key_code": "v",
                   "modifiers": {
                     "optional": [
                       "any"
